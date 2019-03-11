@@ -1,6 +1,7 @@
 package app.model;
 
 import app.controllers.Exceptions.WrongTypeException;
+import app.service.SortService;
 
 import java.util.Arrays;
 
@@ -14,20 +15,10 @@ public class Sort {
     }
 
     public String numbersSort() {
-        int [] sortedArray = new int[numbers.length];
-        Arrays.sort(numbers);
         if (typeOfSort.equals("ASC")) {
-            sortedArray = numbers;
-            return "numbers: " + Arrays.toString(sortedArray);
+            return "numbers: " +  Arrays.toString(SortService.increasingSort(numbers));
         } else if (typeOfSort.equals("DESC")){
-            int i = 0;
-            int j = numbers.length - 1;
-            while (j >= 0) {
-                sortedArray[i] = numbers[j];
-                i++;
-                j--;
-            }
-            return "numbers: " + Arrays.toString(sortedArray);
+            return "numbers: " + Arrays.toString(SortService.decreasingSort(numbers));
         } else {
             throw new WrongTypeException(typeOfSort);
         }
