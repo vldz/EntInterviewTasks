@@ -1,4 +1,4 @@
-package pingpong;
+package app.model;
 
 public class PingPong {
     private final String content = "pong";

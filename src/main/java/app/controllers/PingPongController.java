@@ -1,7 +1,8 @@
-package pingpong;
+package app.controllers;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import app.model.PingPong;
 
 @RestController
 public class PingPongController {
