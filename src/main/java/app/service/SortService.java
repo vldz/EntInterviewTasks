@@ -18,7 +18,7 @@ public class SortService {
         return sort(numbers, false);
     }
 
-    public List<Integer> sort(List<Integer> numbers, boolean naturalOrder) {
+    private List<Integer> sort(List<Integer> numbers, boolean naturalOrder) {
         if (numbers != null) {
             List<Integer> sortedNumbers = new ArrayList<>(numbers);
             if (naturalOrder) {
