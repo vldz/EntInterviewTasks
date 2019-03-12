@@ -1,14 +1,18 @@
 package app.controllers;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import app.model.PingPong;
 
 @RestController
 public class PingPongController {
+    private static final Logger LOG = LoggerFactory.getLogger(PingPongController.class);
+
     @RequestMapping("/status/ping")
     public String pong() {
-        PingPong pingPong = new PingPong();
-        return pingPong.getContent();
+        LOG.info("pong");
+        return "pong";
     }
 }

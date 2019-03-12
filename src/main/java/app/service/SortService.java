@@ -1,26 +1,34 @@
 package app.service;
 
-import java.util.Arrays;
+import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+@Service
 public class SortService {
-    public static int[] decreasingSort(int[] arrayToSort) {
-        Arrays.sort(arrayToSort);
-        int [] sortedArray = new int[arrayToSort.length];
 
-        int i = 0;
-        int j = arrayToSort.length - 1;
-        while (j >= 0) {
-            sortedArray[i] = arrayToSort[j];
-            i++;
-            j--;
-        }
-
-        return sortedArray;
+    public List<Integer> sortAsc(List<Integer> numbers) {
+        return sort(numbers, true);
     }
 
-    public static int[] increasingSort(int[] numbers) {
-        Arrays.sort(numbers);
-        int [] sortedArray = numbers;
-        return sortedArray;
+    public List<Integer> sortDesc(List<Integer> numbers) {
+        return sort(numbers, false);
+    }
+
+    public List<Integer> sort(List<Integer> numbers, boolean naturalOrder) {
+        if (numbers != null) {
+            List<Integer> sortedNumbers = new ArrayList<>(numbers);
+            if (naturalOrder) {
+                Collections.sort(sortedNumbers);
+            } else {
+                Collections.sort(sortedNumbers, Comparator.reverseOrder());
+            }
+            return sortedNumbers;
+        } else {
+            return Collections.emptyList();
+        }
     }
 }
