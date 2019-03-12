@@ -1,11 +1,10 @@
 package app.controllers;
 
-import app.controllers.Exceptions.WrongTypeOfSortAdvice;
 import app.model.NumbersHolder;
 import app.model.ResultNumberHolder;
 import app.service.SortService;
 import org.junit.Test;
-import sun.jvm.hotspot.types.WrongTypeException;
+import app.controllers.Exceptions.WrongTypeException;
 
 import java.util.Arrays;
 import java.util.List;
@@ -50,9 +49,16 @@ public class SortControllerUnitTest {
         assertEquals(expectedList, actualList);
     }
 
-//    @Test(expected = WrongTypeException.class)
-//    public void shouldReturnExeptionMessage() {
-//
-//    }
+    @Test(expected = WrongTypeException.class)
+    public void shouldReturnExceptionMessage() {
+        NumbersHolder numbersHolder = new NumbersHolder();
+        numbersHolder.setNumbers(Arrays.asList(1, 5, 3, 9, 7));
+        numbersHolder.setOrder("WrongWords");
+
+        ResultNumberHolder resultNumberHolder = new ResultNumberHolder();
+        resultNumberHolder.setNumbers(Arrays.asList(9, 7, 5, 3, 1));
+
+        ResultNumberHolder actualNumberHolder = sortController.sort(numbersHolder);
+    }
 
 }
