@@ -1,7 +1,7 @@
 package app.controllers;
 
 import app.model.currency.CurrencyCode;
-import app.model.currency.ResultMid;
+import app.model.currency.ResultValue;
 import app.service.CurrencyService;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +17,7 @@ public class CurrencyController {
     }
 
     @RequestMapping(value = "/currencies/get-current-currency-value-command", method = RequestMethod.POST)
-    public ResultMid valueByCurrency(@RequestBody CurrencyCode currencyCode) {
-        return currencyService.requestMid(currencyCode);
+    public ResultValue valueByCurrency(@RequestBody CurrencyCode currencyCode) {
+        return currencyService.requestValue(currencyCode);
     }
 }

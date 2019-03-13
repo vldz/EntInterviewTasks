@@ -1,6 +1,6 @@
 package app.model.currency;
 
-public class ResultMid {
+public class ResultValue {
     private double value;
 
     public double getValue() {

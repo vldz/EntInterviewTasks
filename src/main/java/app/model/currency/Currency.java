@@ -1,5 +1,6 @@
 package app.model.currency;
 
+import app.controllers.Exceptions.WrongTypeException;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.util.List;
@@ -44,12 +45,12 @@ public class Currency {
         this.rates = rates;
     }
 
-    public double getMid(String name) {
+    public double getValueByName(String name) {
         for (int i = 0; i < rates.size(); i++) {
             if (rates.get(i).getCode().equals(name)) {
                 return rates.get(i).getMid();
             }
         }
-        return 0.0;
+        throw new WrongTypeException(name);
     }
 }
