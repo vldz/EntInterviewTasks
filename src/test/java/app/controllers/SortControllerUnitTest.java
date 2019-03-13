@@ -1,7 +1,7 @@
 package app.controllers;
 
-import app.model.NumbersHolder;
-import app.model.ResultNumberHolder;
+import app.model.numbers.NumbersHolder;
+import app.model.numbers.ResultNumberHolder;
 import app.service.SortService;
 import org.junit.Test;
 import app.controllers.Exceptions.WrongTypeException;
@@ -55,10 +55,7 @@ public class SortControllerUnitTest {
         numbersHolder.setNumbers(Arrays.asList(1, 5, 3, 9, 7));
         numbersHolder.setOrder("WrongWords");
 
-        ResultNumberHolder resultNumberHolder = new ResultNumberHolder();
-        resultNumberHolder.setNumbers(Arrays.asList(9, 7, 5, 3, 1));
-
-        ResultNumberHolder actualNumberHolder = sortController.sort(numbersHolder);
+        sortController.sort(numbersHolder);
     }
 
 }

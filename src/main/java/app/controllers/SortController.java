@@ -1,8 +1,8 @@
 package app.controllers;
 
 import app.controllers.Exceptions.WrongTypeException;
-import app.model.NumbersHolder;
-import app.model.ResultNumberHolder;
+import app.model.numbers.NumbersHolder;
+import app.model.numbers.ResultNumberHolder;
 import app.service.SortService;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
