@@ -1,7 +1,7 @@
 package app.model.currency;
 
 import org.junit.Test;
-import app.controllers.Exceptions.WrongTypeException;
+import app.controllers.exceptions.WrongTypeException;
 
 import java.util.ArrayList;
 import java.util.List;

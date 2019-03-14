@@ -1,6 +1,6 @@
 package app.controllers;
 
-import app.controllers.Exceptions.WrongTypeException;
+import app.controllers.exceptions.WrongTypeException;
 import app.model.numbers.NumbersHolder;
 import app.model.numbers.ResultNumberHolder;
 import app.service.SortService;

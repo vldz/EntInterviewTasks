@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Numbers sort</title>
+
+    <link rel="stylesheet" type="text/css"
+          href="webjars/bootstrap/3.3.7/css/bootstrap.min.css"/>
+</head>
+
+<nav class="navbar navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand">SORT NUMBERS</a>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container" style="min-height: 500px">
+    <div class="starter-template">
+
+        <div id="feedback">
+
+        </div>
+
+        <form class="form-horizontal" id="numbers-form">
+
+            <div class="form-group form-group-lg">
+                <label class="col-sm-2 control-label">Enter numbers: </label>
+
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="numbers"/>
+                </div>
+
+            </div>
+
+            <div class="form-group form-group-lg" id="order">
+                <label class="col-sm-2 control-label">Choose order: </label>
+
+                <div class="col-sm-10">
+
+                    <div class="form-check form-check-inline">
+                        <input type="radio" name="order" class="form-check-input" value="ASC" checked="checked">
+                        <label class="form-check-label">ASC</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input type="radio" name="order" class="form-check-input" value="DESC">
+                        <label class="form-check-label">DESC</label>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div>
+                        <button type="submit" class="btn btn-primary btn-lg">SORT</button>
+                        <button type="reset" class="btn btn-primary btn-lg">RESET</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+<script type="text/javascript"
+        src="webjars/jquery/2.2.4/jquery.min.js"></script>
+
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

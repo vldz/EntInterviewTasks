@@ -1,6 +1,6 @@
 package app.model.currency;
 
-import app.controllers.Exceptions.WrongTypeException;
+import app.controllers.exceptions.WrongTypeException;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.util.List;

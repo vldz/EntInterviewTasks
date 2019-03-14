@@ -1,4 +1,4 @@
-package app.controllers.Exceptions;
+package app.controllers.exceptions;
 
 public class WrongTypeException extends RuntimeException {
     public WrongTypeException(String type) {
