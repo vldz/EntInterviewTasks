@@ -1,5 +1,5 @@
 $(document).ready(function () {
-console.log("not there...");
+    console.log("not there...");
     $("#numbers-form").submit(function (event) {
         console.log("im here");
         //stop submit the form, we will post it manually.
